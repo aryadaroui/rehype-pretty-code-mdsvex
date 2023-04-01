@@ -134,8 +134,11 @@ export default function rehypePrettyCode(options = {}) {
         }
 
         // TODO: allow escape characters to break out of highlighting
-        const strippedValue = value.replace(/{:[a-zA-Z.-]+}/, '');
-        const meta = value.match(/{:([a-zA-Z.-]+)}$/)?.[1];
+        // Lines changed in fork
+        // const strippedValue = value.replace(/{:[a-zA-Z.-]+}/, '');
+        const strippedValue = value.replace(/&#123;:[a-zA-Z.-]+&#125;/, '');
+        // const meta = value.match(/{:([a-zA-Z.-]+)}$/)?.[1];
+        const meta = value.match(/&#123;:([a-zA-Z.-]+)&#125;$/)?.[1];
 
         if (!meta) {
           return;
