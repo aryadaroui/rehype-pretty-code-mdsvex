@@ -1,9 +1,14 @@
 # Rehype Pretty Code MDsveX
 
+
 This is a straight fork of [rehype pretty code](https://rehype-pretty-code.netlify.app/), except it can be used more readily with MDsveX. 
 
 Currently, rehype-pretty-code works for code blocks in MDsveX, but the inline language syntax highlighting features don't work because of how MDsveX has to handle Svelte's curly brackets.
 
+**Still broken so don't download expecting it to work yet**
+
+
+# Usage
 To use, you can follow all of the documentation expected with rehype-pretty-code and MDsveX, BUT, you must disable MDsveX's highlighter. Otherwise, the highlighter will overwrite your rehype-pretty-code formatting.
 
 Example config:
@@ -42,8 +47,3 @@ console.log("strippedValue", strippedValue);
 // const meta = value.match(/{:([a-zA-Z.-]+)}$/)?.[1]; // old
 const meta = value.match(/&#123;:([a-zA-Z.-]+)&#125;$/)?.[1];
 ```
-
-## still broken
-
-the token feature `{:.token}` is still broken. when i figure this out i'll make a PR
- 
